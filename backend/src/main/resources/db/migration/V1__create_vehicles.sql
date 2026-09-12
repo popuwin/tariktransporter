@@ -1,0 +1,17 @@
+CREATE TABLE IF NOT EXISTS vehicles (
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(120) NOT NULL,
+    length_cm INT NOT NULL,
+    width_cm INT NOT NULL,
+    height_cm INT NOT NULL,
+    max_weight_kg INT NOT NULL,
+    max_volume_m3 NUMERIC(10,2) NOT NULL,
+    image_url VARCHAR(255)
+);
+
+INSERT INTO vehicles (name, length_cm, width_cm, height_cm, max_weight_kg, max_volume_m3, image_url) VALUES
+('Газель 3м', 300, 190, 180, 1500, 10.30, '/img/gazel-3m.png'),
+('Газель удлиненная 4.2м', 420, 205, 210, 2000, 18.10, '/img/gazel-42m.png'),
+('Бычок 5м', 500, 220, 220, 3000, 24.20, '/img/bychok-5m.png'),
+('3-тонник 6м', 600, 240, 240, 3000, 34.50, '/img/truck-3t-6m.png'),
+('5-тонник 7м', 700, 245, 260, 5000, 44.60, '/img/truck-5t-7m.png');
